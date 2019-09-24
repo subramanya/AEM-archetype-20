@@ -15,10 +15,9 @@ Reason either missing adobe public repository entries in settings.xml file or ma
 FIX for this issue:--------  
 Then please use this command as it can connect to adobe-public repo directly:
 
- mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate\
-	  -DarchetypeGroupId=com.adobe.granite.archetypes\
-    -DarchetypeArtifactId=aem-project-archetype\ 
-    -DarchetypeVersion=20 -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
-
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate \
+-DarchetypeGroupId=com.adobe.granite.archetypes \
+-DarchetypeArtifactId=aem-project-archetype \
+-DarchetypeVersion=20 -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
 
 
