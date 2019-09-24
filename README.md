@@ -21,3 +21,14 @@ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate \
 -DarchetypeVersion=20 -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
 
 
+*************************************************************************************************************************
+When I run 
+mvn clean install -PautoInstallPackage I get below error:
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-archetype-plugin:3.0.1:generate (default-cli) on project standalone-pom: The desired archetype does not exist
+
+FIX for the issue --
+Run this command
+ mvn -PautoInstallPackage -Padobe-public clean install
+*************************************************************************************************************************
+ 
