@@ -11,7 +11,7 @@ Then you can sync the ui.apps folder's jcr_root folder filesystem with AEM repos
 Let us take example of sample project having name "mycompany".
 Assuming  you have created a aem project having name mycompany using adobe's archetype.
 The archetype creates the project as per Adobe's standard. 
-The path of the mycompany folder inside /apps folder is : /apps/company.
+The path of the mycompany folder inside /apps folder is : /apps/mycompany.
 Inside your created project folder go to ui.apps folder 
 Then cd to content/src/main/content/jcr_root 
 For  ui.apps/content/src/main/content/jcr_root run below command
