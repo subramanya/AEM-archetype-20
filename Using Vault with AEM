@@ -24,19 +24,21 @@ Inside your created project folder go to ui.apps folder
  
  vlt ci
  
+ SYNCING NEW files into AEM:
  If you happen to crete a new file anywhere in /apps or /conf or /etc.
- 
  first you have to execute below command from ui.apps/content/src/main/content/jcr_root folder
- 
- vlt add <path of the file>
+    execute 2 commands 
+    vlt add <path of the file> , then followed by
+    vlt ci     (valut commit)
+    
  For example if the path of the file is -->pps/mycompany/components/content/articleslist/test.html
  Then execute below commands:
- vlt add apps/weretail/components/content/articleslist/test.html
- vlt ci 
+     vlt add apps/weretail/components/content/articleslist/test.html
+     vlt ci 
  
  If you do any changes to a file on AEM's crx/de/index.jsp(crx console), then execute below command on local file system 
  from ui.apps/content/src/main/content/jcr_root folder
- vlt up
+      vlt up
  
  Hope this helps us to put the changes to AEM and the changes from AEM without executing time consuming mvn clean install commands
  
