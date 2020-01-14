@@ -22,11 +22,11 @@ Every time you modify a file use the below command to put the changes to AEM
      vlt ci 
 SYNCING NEW files into AEM: 
 If you happen to create a new file anywhere in /apps or /conf or /etc. 
-First you have to execute below commans from ui.apps/content/src/main/content/jcr_root folder  
+First you have to execute below commands from ui.apps/content/src/main/content/jcr_root folder  
        vlt add <path of the file> , then followed by 
         vlt ci (vault commit) 
 For example: 
-       if the path of the file is -->pps/mycompany/components/content/articleslist/test.html,
+       if the path of the file is -->apps/mycompany/components/content/articleslist/test.html,
      then execute below 2 commands: 
       vlt add apps/weretail/components/content/articleslist/test.html 
       vlt ci 
