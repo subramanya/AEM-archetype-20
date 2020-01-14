@@ -1,45 +1,37 @@
 Open the folder crx-quickstart/opt of AEM 6.3 installation.
 You will find folder filevault.
-Inside filevault you will find the  files filevault-3.1.38.tgz and filevault-3.1.38.zip.
-unzip the appropriate file on your host laptop( filevault-3.1.38.tgz for mac and filevault-3.1.38.zip for windows).
+Inside filevault you will find the files filevault-3.1.38.tgz and filevault-3.1.38.zip. You can unzip the appropriate file on your host laptop( filevault-3.1.38.tgz for mac and filevault-3.1.38.zip for windows).
+
 If you have any AEM source code and if it is already deployed to AEM.
-Then you can sync the ui.apps folder's jcr_root folder filesystem with AEM repository on AEM server so that you 
-need not do the build and deploy using maven commands everytime you change the UI code.
 
-Steps are given below
-Configure your laptop/system to exucute vlt command from "cmd" on windows and "terminal" on Mac.
+Then you can sync the ui.apps folder's jcr_root folder filesystem with AEM repository on AEM server so that you need not do the build and deploy using maven commands everytime you change the UI code.
 
-Let us take example of sample project having name "mycompany"
-The path of the folder inside /apps folder is /apps/company
-Now when you have created a the mycompany using adobe's archetype.
-The archetype creates the project as per Adobe's standard.
+  To configure your laptop/system to execute vlt command from "cmd" on windows or "terminal" on Mac, steps are given below:
 
-Inside your created project folder go to ui.apps folder
- Then cd to content/src/main/content/jcr_root and run :
- vlt --credentials admin:admin checkout -f ../META-INF/vault/filter.xml --force http://localhost:4502/crx
- 
- This will sync your local UI folders like /apps, /conf, /content , /etc folders with AEM server.
- 
- Every time you modify a file use the below command to put the chagnes to AEM
- 
- vlt ci
- 
- SYNCING NEW files into AEM:
- If you happen to crete a new file anywhere in /apps or /conf or /etc.
- first you have to execute below command from ui.apps/content/src/main/content/jcr_root folder
-    execute 2 commands 
-    vlt add <path of the file> , then followed by
-    vlt ci     (valut commit)
-    
- For example if the path of the file is -->pps/mycompany/components/content/articleslist/test.html
- Then execute below commands:
-     vlt add apps/weretail/components/content/articleslist/test.html
+Let us take example of sample project having name "mycompany".
+Assuming  you have created a aem project having name mycompany using adobe's archetype.
+The archetype creates the project as per Adobe's standard. 
+The path of the mycompany folder inside /apps folder is : /apps/company.
+Inside your created project folder go to ui.apps folder 
+Then cd to content/src/main/content/jcr_root 
+For  ui.apps/content/src/main/content/jcr_root run below command
+   vlt --credentials admin:admin checkout -f ../META-INF/vault/filter.xml --force http://localhost:4502/crx 
+Above command will sync your local UI folders like /apps, /conf, /content , /etc folders with AEM server. 
+
+Every time you modify a file use the below command to put the changes to AEM 
      vlt ci 
- 
- If you do any changes to a file on AEM's crx/de/index.jsp(crx console), then execute below command on local file system 
- from ui.apps/content/src/main/content/jcr_root folder
-      vlt up
- 
- Hope this helps us to put the changes to AEM and the changes from AEM without executing time consuming mvn clean install commands
- 
+SYNCING NEW files into AEM: 
+If you happen to create a new file anywhere in /apps or /conf or /etc. 
+First you have to execute below commans from ui.apps/content/src/main/content/jcr_root folder  
+       vlt add <path of the file> , then followed by 
+        vlt ci (vault commit) 
+For example: 
+       if the path of the file is -->pps/mycompany/components/content/articleslist/test.html,
+     then execute below 2 commands: 
+      vlt add apps/weretail/components/content/articleslist/test.html 
+      vlt ci 
 
+If you do any changes to a file on AEM, using  crx/de/index.jsp(crx console), 
+then execute below command on local file system from folder: ui.apps/content/src/main/content/jcr_root 
+    vlt up 
+Hope this helps us to put the changes to AEM and the changes from AEM without executing the time consuming mvn clean install commands  and mvn clean install -PautoInstallPackage commands for UI code changes during development and save devbeloper’s time
