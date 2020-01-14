@@ -34,4 +34,4 @@ For example:
 If you do any changes to a file on AEM, using  crx/de/index.jsp(crx console), 
 then execute below command on local file system from folder: ui.apps/content/src/main/content/jcr_root 
     vlt up 
-Hope this helps us to put the changes to AEM and the changes from AEM without executing the time consuming mvn clean install commands  and mvn clean install -PautoInstallPackage commands for UI code changes during development and save devbeloper’s time
+Hope this helps us to put the changes to AEM and the changes from AEM without executing the time consuming mvn clean install commands  and mvn clean install -PautoInstallPackage commands for UI code changes during development and save devbeloper’s time .  
