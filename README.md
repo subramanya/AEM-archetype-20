@@ -20,6 +20,10 @@ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate \
 -DarchetypeArtifactId=aem-project-archetype \
 -DarchetypeVersion=20 -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
 
+For generating Weekend Project using commond line use the below command
+
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeGroupId=com.adobe.granite.archetypes -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=22 -DgroupId=com.adobe.aem.guides -Dversion=0.0.1-SNAPSHOT -DappsFolderName=wknd -DartifactId=aem-guides-wknd -Dpackage=com.adobe.aem.guides.wknd -DartifactName="WKND Sites Project" -DcomponentGroupName=WKND -DconfFolderName=wknd -DcontentFolderName=wknd -DcssId=wknd -DisSingleCountryWebsite=n -Dlanguage_country=en_us -DoptionAemVersion=6.5.0 -DoptionDispatcherConfig=none -DoptionIncludeErrorHandler=n -DoptionIncludeExamples=y -DoptionIncludeFrontendModule=y -DpackageGroup=wknd -DsiteName="WKND Site"  -DarchetypeCatalog=https://repo.adobe.com/nexus/content/groups/public/
+
 
 *************************************************************************************************************************
 When I run 
